@@ -65,7 +65,11 @@
         window.onload = onLoadPage();
 
         function onLoadPage() {
-            updateBrandName(document.getElementById("apple_check"));
+            // cara 1 / option 1:
+            // updateBrandName(document.getElementById("apple_check"));
+
+            // cara 2 / option 2:
+            document.getElementById("apple_check").addEventListener("change", updateBrandName(document.getElementById("apple_check")));
         }      
 
     </script>
