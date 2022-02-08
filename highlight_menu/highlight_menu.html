@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Highlight menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="d-flex flex-row">
+        <div class="col-sm-1" style="width: 195px; height:400px; background: #282828; overflow: auto">
+            <div id="output"></div>
+        </div>
+        <div class="col" style="background: #181818; height: 400px; width: auto;">
+            <div id="content" style="color: white; padding-left: 10%;"></div>
+        </div>
+    </div>
+    <div id="current-id"></div>
+    <div id="last-id"></div>
+    <div id="selected-id"></div>
+
+    <script type="text/javascript">
+        var merk_list = ["Acer", "Apple", "Asus", "Dell", "HP", "Lenovo", "MSI", "Samsung", "Toshiba", "Zyrex"];
+        let brand = "";
+        let last_id, selected_id = "";
+        const FONT_COLOR_DEFAULT = "#8f8f8f";
+        const BG_ONHOVER = "#424242";
+        const BG_DEFAULT = "#282828";
+
+        for (let i = 0; i < merk_list.length; i++) {
+            brand += "<a class='nav-link' href=# id=" + merk_list[i]
+                + " onmouseover=onMouseOver(this); onmouseleave=onMouseLeave(this); "
+                + "onclick=holdBackground(this); style='text-decoration: none; "
+                + "color: #8f8f8f;'>" + merk_list[i] + "</a>";
+        }
+
+        document.getElementById("output").innerHTML = brand;
+
+        function onMouseOver(obj) {
+            document.getElementById(obj.id).style.background = BG_ONHOVER;
+            document.getElementById(obj.id).style.color = "white";
+
+            document.getElementById("current-id").innerHTML = "Current id: " + obj.id;
+        }
+
+        function onMouseLeave(obj) {
+            if (obj.id != selected_id) {
+                document.getElementById(obj.id).style.color = FONT_COLOR_DEFAULT;
+                document.getElementById(obj.id).style.background = BG_DEFAULT;
+            }
+
+            last_id = obj.id;
+            document.getElementById("last-id").innerHTML = "Last id: " + last_id;
+        }
+
+        function holdBackground(obj) {
+            if (selected_id != "") {
+                document.getElementById(selected_id).style.background = BG_DEFAULT;
+                document.getElementById(selected_id).style.color = FONT_COLOR_DEFAULT;
+            }
+
+            selected_id = obj.id;
+            document.getElementById("selected-id").innerHTML = "Selected id: " + selected_id;
+            document.getElementById("content").innerHTML = "Content for " + selected_id;
+        }
+    </script>
+</body>
+
+</html>
