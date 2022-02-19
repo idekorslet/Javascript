@@ -46,7 +46,8 @@
         var merk_list = [];
 
         function updateBrandName(obj) {
-            let checkbox_id = document.getElementById(obj.id);
+            // let checkbox_id = document.getElementById(obj.id);
+            let checkbox_id = obj.id; // langsung seperti ini ternyata bisa
             let brand_name = checkbox_id.value;
             let index = merk_list.indexOf(brand_name);
 
