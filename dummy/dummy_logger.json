@@ -1,0 +1,103 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nama": "Logger A"
+      },
+      "geometry": {
+        "coordinates": [
+          112.04620813440151,
+          -7.9148153266938
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nama": "Logger B"
+      },
+      "geometry": {
+        "coordinates": [
+          112.05561568,
+          -7.97727189
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nama": "Logger C"
+      },
+      "geometry": {
+        "coordinates": [
+          112.03167861337285,
+          -7.909559330361024
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nama": "Logger D"
+      },
+      "geometry": {
+        "coordinates": [
+          112.00760083791053,
+          -7.937562443345804
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nama": "Logger E"
+      },
+      "geometry": {
+        "coordinates": [
+          112.05055076674667,
+          -7.966216292302516
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nama": "Logger F"
+      },
+      "geometry": {
+        "coordinates": [
+          112.07388634383084,
+          -7.880532718461588
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nama": "Logger G"
+      },
+      "geometry": {
+        "coordinates": [
+          112.07228,
+          -7.907
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
